@@ -395,15 +395,29 @@
       /* era-coloured placeholder bg */
       .card[data-era="regen"] .card-media {
         background: var(--then-lt);
-        color: var(--then);
+        color: var(--then);       
       }
       .card[data-era="most"] .card-media {
         background: var(--now-lt);
-        color: var(--now);
+        color: var(--now);       
       }
       .card[data-era="mindketto"] .card-media {
         background: var(--both-lt);
-        color: var(--both);
+        color: var(--both);       
+      }
+
+      /* card border */
+       .card[data-era="regen"] {  
+        /* border: 4px solid var(--then); */
+        box-shadow: 3px 3px 3px var(--then);
+      }
+      .card[data-era="most"] {
+        /* border: 4px solid var(--now); */
+        box-shadow: 3px 3px 3px var(--now);
+      }
+      .card[data-era="mindketto"] {
+        /* border: 4px solid var(--both); */
+        box-shadow: 3px 3px 3px var(--both);
       }
 
       /* subtle diagonal stripes on placeholder */
@@ -711,9 +725,10 @@
           era: "regen",
           type: "video",
           title: "Az írógép kora",
-          desc: " – videó",
+          desc: " SZESZI – videó",
           src: "media/irodai_elet.mp4",
-          poster: "media/iroda_borito.png"
+          poster: "media/iroda_borito.png",
+          contributors: "közös"
 
         },
         {
@@ -746,9 +761,10 @@
           era: "mindketto",
           type: "video",
           title: "A munka világa régen és ma",
-          desc: "Helykitöltő alkotás – kép",
+          desc: "10.A – kép",
           src: "media/A_munka_világa__Régen_és_ma.mp4",
           poster: "media/regenma.png",
+          contributors: "Kovács Péter, Csatári Máté, Bakó Bence József"
         },
 
         // TANULÁS
@@ -782,17 +798,32 @@
           era: "most",
           type: "video",
           title: "Kréta Elektronikus Osztálynapló",
-          desc: "Helykitöltő alkotás – videó",
-          src: "media/kreta.mp4"
-
+          desc: "10.A – videó",
+          src: "media/kreta.mp4",
+          poster: "media/kreta.png",
+          contributors: "Kovács Péter, Csatári Máté, Bakó Bence József"
         },
         {
           id: 10,
           topic: "tanulas",
           era: "mindketto",
-          type: "kep",
+          type: "video",
           title: "Tanulás – két világ",
-          desc: "Helykitöltő alkotás – kép",
+          desc: "10.A – videó",
+          src: "media/Tanulás_Régen_és_most.mp4",
+          poster: "media/Tanulás_Régen_és_most.png",
+          contributors: "Tusz Mónika, Elek Kristóf, Balog Zsombor Balázs"
+        },
+        {
+          id: 51,
+          topic: "tanulas",
+          era: "mindketto",
+          type: "video",
+          title: "A tanulás átalakulása",
+          desc: "10.A – videó",
+          src: "media/tanulás.mp4",
+          poster: "media/tanulás.png",
+          contributors: "Kovács Péter, Csatári Máté, Bakó Bence József"
         },
 
         // KAPCSOLATTARTÁS
@@ -802,9 +833,10 @@
           era: "regen",
           type: "video",
           title: "Levélírás",
-          desc: " - videó",
+          desc: "SZESZI - videó",
           src: "media/level2.mp4",
           poster: "media/level.png",
+          contributors: "közös"
         },
         {
           id: 12,
@@ -812,8 +844,9 @@
           era: "regen",
           type: "kep",
           title: "Telefonfülke",
-          desc: " - kép",
+          desc: "SZESZI - kép",
           src: "media/telefonfulke.jpg",
+          contributors: "közös"
         },
         {
           id: 13,
@@ -837,25 +870,38 @@
           era: "mindketto",
           type: "video",
           title: "A kommunikáció forradalma",
-          desc: "– videó",
+          desc: "10.A – videó",
           src: "media/A_Kommunikáció_Forradalma.mp4",
-          poster: "media/Kommunikáció_Forradalma.png"
+          poster: "media/Kommunikáció_Forradalma.png",
+          contributors: "Baumann Dávid, Csentős József Endre, Hegedűs Patrik"
+        },
+        {
+          id: 16,
+          topic: "kapcsolattartas",
+          era: "mindketto",
+          type: "video",
+          title: "A digitális generációs szakadék",
+          desc: "10.A – videó",
+          src: "media/A_digitális_generációs_szakadék.mp4",
+          poster: "media/A_digitális_generációs_szakadék.png",
+          contributors: "Tusz Mónika, Elek Kristóf, Balog Zsombor Balázs"
         },
 
         // ÜGYINTÉZÉS
         {
-          id: 16,
+          id: 17,
           topic: "ugyintezes",
           era: "regen",
           type: "video",
           title: "Hivatal, sor",
-          desc: " – video",
+          desc: " SZESZI – video",
           src: "media/grok-video-hivatali-ugyintezes.mp4",
           poster: "media/hivatal.png",
-          making: "media/making_hivatal.mp4"
+          making: "media/making_hivatal.mp4",
+          contributors: "közös"
         },
         {
-          id: 17,
+          id: 18,
           topic: "ugyintezes",
           era: "regen",
           type: "kep",
@@ -863,7 +909,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 18,
+          id: 19,
           topic: "ugyintezes",
           era: "most",
           type: "kep",
@@ -871,7 +917,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 19,
+          id: 20,
           topic: "ugyintezes",
           era: "most",
           type: "video",
@@ -879,7 +925,7 @@
           desc: "Helykitöltő alkotás – videó",
         },
         {
-          id: 20,
+          id: 21,
           topic: "ugyintezes",
           era: "mindketto",
           type: "kep",
@@ -889,16 +935,17 @@
 
         // SZÓRAKOZÁS
         {
-          id: 21,
+          id: 22,
           topic: "szórakozas",
           era: "regen",
           type: "video",
           title: "Football",
-          desc: "– videó",
+          desc: "11.A – videó",
           src: "media/football.mp4", 
+          contributors: '(Pál Sándor, Kerekes Imre, Balog Dávid, Sápi Roland)'
         },
         {
-          id: 22,
+          id: 23,
           topic: "szórakozas",
           era: "regen",
           type: "kep",
@@ -906,7 +953,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 23,
+          id: 24,
           topic: "szórakozas",
           era: "most",
           type: "kep",
@@ -914,7 +961,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 24,
+          id: 25,
           topic: "szórakozas",
           era: "most",
           type: "video",
@@ -922,7 +969,7 @@
           desc: "Helykitöltő alkotás – videó",
         },
         {
-          id: 25,
+          id: 26,
           topic: "szórakozas",
           era: "mindketto",
           type: "kep",
@@ -932,7 +979,7 @@
 
         // INFORMÁCIÓSZERZÉS
         {
-          id: 26,
+          id: 27,
           topic: "informacioszerzes",
           era: "regen",
           type: "kep",
@@ -940,7 +987,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 27,
+          id: 28,
           topic: "informacioszerzes",
           era: "regen",
           type: "kep",
@@ -948,7 +995,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 28,
+          id: 29,
           topic: "informacioszerzes",
           era: "most",
           type: "kep",
@@ -956,7 +1003,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 29,
+          id: 30,
           topic: "informacioszerzes",
           era: "most",
           type: "video",
@@ -964,20 +1011,21 @@
           desc: "Helykitöltő alkotás – videó",
         },
         {
-          id: 30,
+          id: 31,
           topic: "informacioszerzes",
           era: "mindketto",
           type: "video",
           title: "Az információszerzés változása",
-          desc: " - video",
+          desc: "SZESZI - video",
           src: "media/informacioszerzes_valtozasa.mp4",
           poster: "media/inf_szerzes.png",
           making: "media/making_informacioszerzes.mp4",
+          contributors: "közös"
         },
 
         // VÁSÁRLÁS
         {
-          id: 31,
+          id: 32,
           topic: "vasarlas",
           era: "regen",
           type: "kep",
@@ -985,7 +1033,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 32,
+          id: 33,
           topic: "vasarlas",
           era: "regen",
           type: "kep",
@@ -993,7 +1041,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 33,
+          id: 34,
           topic: "vasarlas",
           era: "most",
           type: "kep",
@@ -1001,7 +1049,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 34,
+          id: 35,
           topic: "vasarlas",
           era: "most",
           type: "video",
@@ -1009,7 +1057,7 @@
           desc: "Helykitöltő alkotás – videó",
         },
         {
-          id: 35,
+          id: 36,
           topic: "vasarlas",
           era: "mindketto",
           type: "kep",
@@ -1019,7 +1067,7 @@
 
         // EGÉSZSÉG
         {
-          id: 36,
+          id: 37,
           topic: "egeszseg",
           era: "regen",
           type: "kep",
@@ -1027,7 +1075,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 37,
+          id: 38,
           topic: "egeszseg",
           era: "regen",
           type: "kep",
@@ -1035,7 +1083,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 38,
+          id: 39,
           topic: "egeszseg",
           era: "most",
           type: "kep",
@@ -1043,7 +1091,7 @@
           desc: "Helykitöltő alkotás – kép",
         },
         {
-          id: 39,
+          id: 40,
           topic: "egeszseg",
           era: "most",
           type: "video",
@@ -1051,7 +1099,7 @@
           desc: "Helykitöltő alkotás – videó",
         },
         {
-          id: 40,
+          id: 41,
           topic: "egeszseg",
           era: "mindketto",
           type: "kep",
@@ -1092,8 +1140,9 @@
         const space = !w.src;
         return `
       <div class="card" data-era="${w.era}" data-id="${w.id}" tabindex="0" role="button" aria-label="${w.title}">
-        <div class="card-media">
-          ${isVideo ? '<video src="' + w.src + '" poster="' + w.poster + '"></video>' : '<img src="' + w.src + '" alt="' + w.title + '">'}
+        <div class="card-media" title="${w.contributors ? w.contributors : ''}">
+          
+          ${isVideo ? `<video src="${w.src}" poster="${w.poster}"></video>` : `<img src="${w.src}" alt="${w.title}"  />`}
          
           ${isVideo ? `<div class="play-icon">▶</div>` : ""}
         </div>
@@ -1103,6 +1152,7 @@
         </div>
       </div>`;
       }
+      // ${isVideo ? '<video src="' + w.src + '" poster="' + w.poster + '" title="'+ w.contributors +'"></video>' : '<img src="' + w.src + '" alt="' + w.title + '" title="'+ w.contributors +'" />'}
       //   ${isVideo ? (space ? vidIcon : '<video src="' + w.src + '" controls poster="' + w.poster + '"></video>') : (space ? imgIcon : '<img src="' + w.src + '" alt="' + w.title + '">')}
       //  <span>${isVideo ? 'Videó' : 'Kép'}</span>
 
